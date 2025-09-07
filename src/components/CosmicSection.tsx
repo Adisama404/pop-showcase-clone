@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const CosmicSection = () => {
   return (
@@ -14,9 +15,11 @@ const CosmicSection = () => {
             apps, stability, security, and performance to Pop!_OS users everywhere.
           </p>
           
-          <Button variant="cosmic" size="lg" className="text-lg px-8 py-6 font-bold">
-            LEARN MORE ABOUT COSMIC →
-          </Button>
+          <a href="https://system76.com/cosmic" target="_blank" rel="noopener noreferrer">
+            <Button variant="cosmic" size="lg" className="text-lg px-8 py-6 font-bold">
+              LEARN MORE ABOUT COSMIC →
+            </Button>
+          </a>
         </div>
       </div>
     </section>

@@ -1,9 +1,18 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const navItems = [
-    "laptops", "desktops", "workstations", "mini", "servers", 
-    "keyboards", "components", "pop_os", "merch", "specials"
+    { name: "laptops", path: "/laptops" },
+    { name: "desktops", path: "/desktops" },
+    { name: "workstations", path: "/workstations" },
+    { name: "mini", path: "/mini" },
+    { name: "servers", path: "/servers" },
+    { name: "keyboards", path: "/keyboards" },
+    { name: "components", path: "/components" },
+    { name: "pop_os", path: "/pop-os" },
+    { name: "merch", path: "/merch" },
+    { name: "specials", path: "/specials" }
   ];
 
   return (
@@ -11,25 +20,25 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* System76 Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <div className="text-2xl font-bold text-foreground">
               system<span className="text-pop-orange">76</span>
             </div>
             <div className="text-xs text-muted-foreground">
               Powerful Linux Computers
             </div>
-          </div>
+          </Link>
 
           {/* Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
             {navItems.map((item) => (
-              <Button 
-                key={item} 
-                variant="ghost" 
-                className="text-foreground hover:text-pop-teal transition-colors capitalize"
+              <Link 
+                key={item.name} 
+                to={item.path}
+                className="text-foreground hover:text-pop-teal transition-colors capitalize px-2 py-1 rounded hover:bg-secondary/50"
               >
-                {item.replace('_', ' ')}
-              </Button>
+                {item.name.replace('_', ' ')}
+              </Link>
             ))}
           </nav>
 

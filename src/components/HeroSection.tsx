@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import spaceHero from "@/assets/space-hero.jpg";
 
 const HeroSection = () => {
@@ -35,12 +36,16 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button variant="download" size="lg" className="text-lg px-8 py-6">
-            DOWNLOAD
-          </Button>
-          <Button variant="donate" size="lg" className="text-lg px-8 py-6">
-            DONATE TO POP
-          </Button>
+          <Link to="/pop-os">
+            <Button variant="download" size="lg" className="text-lg px-8 py-6">
+              DOWNLOAD
+            </Button>
+          </Link>
+          <a href="https://github.com/sponsors/pop-os" target="_blank" rel="noopener noreferrer">
+            <Button variant="donate" size="lg" className="text-lg px-8 py-6">
+              DONATE TO POP
+            </Button>
+          </a>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -48,9 +49,11 @@ const TestimonialsSection = () => {
                   <p className="font-semibold text-foreground">
                     {testimonial.name}
                   </p>
-                  <Button variant="ghost" size="sm" className="text-pop-teal hover:text-pop-orange">
-                    Shop now
-                  </Button>
+                  <Link to="/laptops">
+                    <Button variant="ghost" size="sm" className="text-pop-teal hover:text-pop-orange">
+                      Shop now
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -59,9 +62,11 @@ const TestimonialsSection = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Button variant="cosmic" size="lg" className="text-lg px-12 py-6">
-            Explore System76 Hardware
-          </Button>
+          <Link to="/laptops">
+            <Button variant="cosmic" size="lg" className="text-lg px-12 py-6">
+              Explore System76 Hardware
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

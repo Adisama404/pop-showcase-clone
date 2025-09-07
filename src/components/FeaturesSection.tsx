@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Monitor, Cpu, Shield, Settings } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FeaturesSection = () => {
   const features = [
@@ -7,25 +8,29 @@ const FeaturesSection = () => {
       icon: Monitor,
       title: "Workflow",
       description: "Pop!_OS is designed for fast navigation, easy workspace organization, and fluid, convenient workflow. Your operating system should encourage discovery, not obstruct it.",
-      link: "Learn More"
+      link: "Learn More",
+      url: "https://system76.com/pop/workflow/"
     },
     {
       icon: Cpu,
       title: "Compatibility", 
       description: "Develop software out of the box with a vast array of libraries and tools at your disposal. Pop!_OS uses APT and Flatpak package management, meaning it's easy to install, remove, and update all software on the OS.",
-      link: "Learn More"
+      link: "Learn More",
+      url: "https://system76.com/pop/compatibility"
     },
     {
       icon: Shield,
       title: "Keep Your Computer Secure",
       description: "Built with security at its core. Full-disk encryption comes standard, keeping your data safe from unauthorized access. You're in control of system updates, installing them on your schedule to minimize disruptions.",
-      link: "Learn More"
+      link: "Learn More",
+      url: "https://system76.com/pop/security"
     },
     {
       icon: Settings,
       title: "Customization",
       description: "Get comfy with an extensive, easy-to-find list of preferences. Set dock orientation, window tiling, Super navigation, keyboard layout and shortcuts, privacy controls, and more. Your computer, your tool, your way. YOURS.",
-      link: ""
+      link: "",
+      url: ""
     }
   ];
 
@@ -55,10 +60,12 @@ const FeaturesSection = () => {
                 {feature.description}
               </p>
               
-              {feature.link && (
-                <Button variant="ghost" className="text-pop-teal hover:text-pop-orange font-semibold">
-                  {feature.link}
-                </Button>
+              {feature.link && feature.url && (
+                <a href={feature.url} target="_blank" rel="noopener noreferrer">
+                  <Button variant="ghost" className="text-pop-teal hover:text-pop-orange font-semibold">
+                    {feature.link}
+                  </Button>
+                </a>
               )}
             </div>
           ))}
