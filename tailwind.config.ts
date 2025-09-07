@@ -57,6 +57,31 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Pop!_OS Space Theme Colors
+        space: {
+          dark: "hsl(var(--space-dark))",
+          blue: "hsl(var(--space-blue))",
+          light: "hsl(var(--space-light))",
+        },
+        pop: {
+          orange: "hsl(var(--pop-orange))",
+          teal: "hsl(var(--pop-teal))",
+          yellow: "hsl(var(--pop-yellow))",
+        },
+      },
+      backgroundImage: {
+        'gradient-space': 'var(--gradient-space)',
+        'gradient-cosmic': 'var(--gradient-cosmic)',
+        'gradient-aurora': 'var(--gradient-aurora)',
+      },
+      boxShadow: {
+        'space': 'var(--shadow-space)',
+        'glow': 'var(--shadow-glow)',
+        'orange-glow': 'var(--shadow-orange-glow)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
       },
       borderRadius: {
         lg: "var(--radius)",

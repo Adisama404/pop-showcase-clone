@@ -15,6 +15,10 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Pop!_OS themed variants
+        download: "bg-pop-teal text-white hover:bg-pop-teal/90 font-semibold shadow-glow hover:shadow-orange-glow transition-all duration-300",
+        donate: "bg-pop-orange text-white hover:bg-pop-orange/90 font-semibold shadow-orange-glow hover:shadow-glow transition-all duration-300",
+        cosmic: "bg-gradient-aurora text-white hover:opacity-90 font-semibold animate-pulse-glow",
       },
       size: {
         default: "h-10 px-4 py-2",
